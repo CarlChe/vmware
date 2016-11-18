@@ -1,0 +1,20 @@
+VMware Virtual Networking Concepts
+  
+Introduction
+
+  With virtual networking, you can network virtual machines in the same way that you do physical machines and can build
+  complex networks within a single ESX Server hosts or across multiple ESX Server hosts.
+  
+  Virtual switches allow virtual machines on the same ESX Server host to communicate with eache other using the same 
+  protocols that would be used over physical switches, without the need for additional networking hardware. ESX Server 
+  virtual switches also support VLANs that are compatible with standard VLAN implementations from other vendors.
+  
+VMware Infrastructure Networking Components
+  The key virtual network components provided by Virutal Infrastructure 3 are virtual Ethernet adapters, used by individual 
+  virtual machines, and virtual switches.
+
+  
+  
+  
+  
+  
