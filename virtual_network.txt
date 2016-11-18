@@ -11,7 +11,33 @@ Introduction
   
 VMware Infrastructure Networking Components
   The key virtual network components provided by Virutal Infrastructure 3 are virtual Ethernet adapters, used by individual 
-  virtual machines, and virtual switches.
+  virtual machines, and virtual switches, which connect virtual machines to each other and connect both virtual machines and the ESX
+  Server service console to external networks.
+  
+How Virtual Ethernet Adapters Work
+  Three types of virtual adapter (for VMs):
+    vmxnet
+      
+    vlance
+    
+    e1000
+    
+  Other virtual network adapters:
+    vswif -- a paravirtualized device similar to vmxnet that is only used by ESX Server service console
+    vmknic -- a virtual device in the VMkernel, the software layer that manages most of the physical resources on the ESX Server host.
+    
+How Virtual Switches Work
+   
+   Virtual switches are the key networking components in VMware Infrastructure 3. "built ot order" at runtime from a collection
+   of small functional units, Some of the key functional units are:
+    
+    *The core Layer 2 forwarding engine
+    *VLAN tagging, stripping, and filtering units.
+    *Layer 2 security, checksum, and segmentation offload units.
+    
+
+  
+  
 
   
   
