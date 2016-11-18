@@ -36,6 +36,56 @@ How Virtual Switches Work
     *Layer 2 security, checksum, and segmentation offload units.
     
 
+
+Virtual Port
+  The port on the virtual switches
+  
+Uplink port 
+  Ports associated iwth physical adapter, providing a connection between a virtual netwrok and a physical network
+  
+Port Groups
+  You can think of port groups as templates for creating virtual ports with particular sets of specifications.
+  Port groups are user-named objects what contain enough configuration information to provide persistent and consistent 
+  network access for virtual Ethernet adapters:
+  
+  * Virtual switch name
+  * VLAN IDs and policies for tagging and filtering
+  * Teaming policty
+  * Layer 2 security options
+  * Traffic shaping parameters
+  
+Uplinks
+  Physical Ethernet adapters serve as bridges between virtual and physical networks.
+  
+  In order for a virtual switch to provide access to more thank on VLAN, the physical switch ports to which its uplinks are
+  connected must be in trunking mode. it is importand to prune the VLANs, keeping only those that are required for the virtual switch.
+  
+  You can specify different teaming behavior for different groups of virtual machines that share the same team of physical adapters.
+  
+VLAN in VMware Infrastructure
+  There are three different configuration modes to tag the packets for virtual machine frames.
+
+    * Virtual switch tagging(VST mode) -- 
+        Most common configuration. In this mode, you provision one port group on virtual switch for each vlan, then attach the virtual 
+        machine's virtual adapter to the port group in stead of the virtual switch directly.
+        
+        Use of this mode requires that the physical switch provide a trunk.
+    
+    * Virtual machine guest tagging (VGT mode) --
+        You may install an 802.1Q VLAN trunking driver inside the virtual machine, and tags will be preserved between the virutal 
+        machine networking stack and external switch when frames are passed from or to virtual switches.
+        
+    * External switch tagging (EST mode)  --
+        You may use external switches for VLAN tagging.
+        
+  
+  
+  
+  
+  
+
+    
+
   
   
 
