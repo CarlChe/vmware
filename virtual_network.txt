@@ -79,7 +79,10 @@ VLAN in VMware Infrastructure
         You may use external switches for VLAN tagging.
         
   
-  
+NIC Teaming
+  You can connect single virtual switch to multiple physical Ethernet adapters using VMware Infrastructure feature called NIC teaming.
+  A team can share the load of traffic between physical and virtual network among some or all of its member and provide passive failover
+  in the event of a hardware failure or network outage.
   
   
   
